@@ -14,7 +14,8 @@ db.sequelize.sync({force: true}).then(() => {
 });
  
 require('./app/route/customer.route.js')(app);
- 
+
+app.get('/', (req, res) => res.send('Hello World!'))
 // Create a Server
 var server = app.listen(process.env.PORT || 5000, function () {
  
